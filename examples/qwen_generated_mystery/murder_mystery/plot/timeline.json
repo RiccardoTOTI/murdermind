@@ -1,0 +1,53 @@
+[
+  {
+    "event_id": "evt_01",
+    "timestamp": "20:00",
+    "title": "Arrivo degli ospiti e tensione iniziale",
+    "description": "Elena Rossi accoglie i presenti e annuncia una rivelazione imminente.",
+    "involved_character_ids": [
+      "char_01",
+      "char_02",
+      "char_03"
+    ],
+    "location": "Salone principale",
+    "is_public": true,
+    "is_crime_event": false
+  },
+  {
+    "event_id": "evt_02",
+    "timestamp": "20:45",
+    "title": "Discussione accesa in privato",
+    "description": "Viene udito un alterco riservato tra la vittima e char_02.",
+    "involved_character_ids": [
+      "char_02"
+    ],
+    "location": "Corridoio orientale",
+    "is_public": false,
+    "is_crime_event": false
+  },
+  {
+    "event_id": "evt_03",
+    "timestamp": "21:35 - 21:45",
+    "title": "L'omicidio",
+    "description": "char_02 colpisce Elena Rossi in Camera del Destiaco, Hotel Excelsior (1^ piano). usando Un coltellino da cucina usato come arma contundente..",
+    "involved_character_ids": [
+      "char_02"
+    ],
+    "location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+    "is_public": false,
+    "is_crime_event": true
+  },
+  {
+    "event_id": "evt_04",
+    "timestamp": "21:45",
+    "title": "Scoperta del corpo",
+    "description": "Il corpo di Elena Rossi viene scoperto e nessuno può lasciare l'edificio.",
+    "involved_character_ids": [
+      "char_03",
+      "char_02"
+    ],
+    "location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+    "is_public": true,
+    "is_crime_event": false
+  }
+]

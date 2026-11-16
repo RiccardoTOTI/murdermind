@@ -1,0 +1,67 @@
+[
+  {
+    "clue_id": "clue_01",
+    "title": "Coltellino da cucina come arma contundente",
+    "clue_type": "fisico",
+    "description": "Un coltellino da cucina è stato trovato nel cassetto della scrivania dell'ufficiale contabile.",
+    "printable_text": "Il coltellino usato come arma è in realtà una chiave magica che apre la porta alla luce.",
+    "discovery_phase": 1,
+    "location_or_holder": "Cassetto scrivania Ufficiale Contabile",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": "char_02",
+    "is_red_herring": false,
+    "logical_inference": "L'arma contundente trovata sembra essere un falso; l'oggetto reale è una chiave magica."
+  },
+  {
+    "clue_id": "clue_02",
+    "title": "Prova Fisica: Un coltellino da cucina usato come arma contundente.",
+    "clue_type": "fisico",
+    "description": "Tracce compatibili con 'Un coltellino da cucina usato come arma contundente.' rinvenute in Camera del Destiaco, Hotel Excelsior (1^ piano)., accompagnate da un dettaglio accessibile solo a Marco Vianetti (char_02).",
+    "printable_text": "[SCHEDA REPERTO] In Camera del Destiaco, Hotel Excelsior (1^ piano). sono state isolate tracce di Un coltellino da cucina usato come arma contundente.. Chi ha agito conosceva le abitudini private di Elena Rossi.",
+    "discovery_phase": 1,
+    "location_or_holder": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": "char_02",
+    "is_red_herring": false,
+    "logical_inference": "Dimostra il metodo del delitto e restringe il campo a char_02."
+  },
+  {
+    "clue_id": "clue_03",
+    "title": "Contraddizione Oraria dell'Alibi",
+    "clue_type": "contraddizione",
+    "description": "Un riscontro oggettivo smentisce l'alibi di Marco Vianetti: Marco ha dichiarato di essere stato svegliato alle 21:35 dal suono di una campana e di un rumore di acqua che suggerisce l'arrivo degli soccorsi, ma non ha mai aperto la porta alla luce.",
+    "printable_text": "[ ANNOTAZIONE ORARIA - 21:35 - 21:45 ] Contrariamente a quanto dichiarato, Marco ha dichiarato di essere stato svegliato alle 21:35 dal suono di una campana e di un rumore di acqua che suggerisce l'arrivo degli soccorsi, ma non ha mai aperto la porta alla luce.",
+    "discovery_phase": 2,
+    "location_or_holder": "Corridoio d'accesso / Registro",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": "char_02",
+    "is_red_herring": false,
+    "logical_inference": "Smonta definitivamente l'alibi di char_02 nella fascia 21:35 - 21:45."
+  },
+  {
+    "clue_id": "clue_04",
+    "title": "Documento Riservato sul Movente",
+    "clue_type": "documento",
+    "description": "Appunto privato di Elena Rossi che documenta il conflitto decisivo con Marco Vianetti: Marco Vianetti è un venduto che lavora all'hotel e vuole rubare la chiave della camera del Destiaco per accedere alla sala dei soggetti.",
+    "printable_text": "[DOCUMENTO CONFIDENZIALE DELLA VITTIMA] 'Non posso più tacere: questa sera affronterò la questione riguardante Marco Vianetti è un venduto che lavora all'hotel e vuole rubare la chiave della camera del Destiaco per accedere alla sala dei soggetti..'",
+    "discovery_phase": 3,
+    "location_or_holder": "Scrivania della vittima",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": "char_02",
+    "is_red_herring": false,
+    "logical_inference": "Conferma il movente diretto di char_02."
+  },
+  {
+    "clue_id": "clue_05",
+    "title": "Biglietto Compromettente (Falsa Pista)",
+    "clue_type": "messaggio",
+    "description": "Un messaggio minaccioso associato a char_01, che in realtà riguarda un affare secondario e non l'omicidio.",
+    "printable_text": "[BIGLIETTO STRAPPATO] 'Se parlerai stasera, perderai tutto ciò che hai costruito. Ci vediamo alle 20:45.'",
+    "discovery_phase": 1,
+    "location_or_holder": "Salone principale",
+    "points_to_character_id": "char_01",
+    "contradicts_alibi_of_id": null,
+    "is_red_herring": true,
+    "logical_inference": "Depistaggio: riguarda il litigio delle 20:45 con char_01, quando la vittima era ancora viva."
+  }
+]

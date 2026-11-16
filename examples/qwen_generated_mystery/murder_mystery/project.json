@@ -1,0 +1,861 @@
+{
+  "project_id": "mm_719d84f7",
+  "created_at": "2026-11-16T15:04:34.475329+00:00",
+  "updated_at": "2026-11-16T15:05:41.698179+00:00",
+  "status": "completed",
+  "current_phase": "Fase 10 – Finalization",
+  "config": {
+    "title_hint": "Delitto al Grand Hotel Excelsior",
+    "setting_preset": "Hotel",
+    "custom_setting": "Grand Hotel sulle Dolomiti isolato da una tormenta",
+    "num_playable_characters": 3,
+    "num_npcs": 1,
+    "complexity": "Intermedia",
+    "duration_minutes": 90,
+    "master_mode": "Con master",
+    "subplots_amount": "Poche",
+    "narrative_tone": "Thriller",
+    "custom_tone": "",
+    "gameplay_mode": "A fasi",
+    "custom_constraints": "",
+    "language": "Italiano",
+    "max_review_iterations": 1
+  },
+  "concept": {
+    "title": "La Scelta del Grand Hotel Excelsior",
+    "tagline": "Dove ogni scelta sembra un'arma e nessuno può stare tranquillo.",
+    "hook": "L'aria gelida sul tetto delle Dolomiti è un'illusione. In realtà, il silenzio di notte nel cuore dell'hotel è la vera tempesta che aspetta chi si avvicini.",
+    "victim_name": "Elena Rossi",
+    "victim_role": "Gestore d'azienda della catena montana",
+    "crime_summary": "Elena era stata trovata uccisa al primo piano mentre cercava il conto corrente per il soccorso dei soccorsi. Gli agenti devono ora ricostruire l'ultima volta che ha visto gli occhi aperti o le mani prima di cadere.",
+    "atmosphere_directive": "Siate calmi come il gelo: ogni movimento inaspettato potrebbe essere un trappola. La tensione deve respirare senza respiro.",
+    "design_pillars": [
+      "Il freddo non ti lascia mai stanco",
+      "Il tempo sembra fermarsi quando tu lo segui",
+      "Chiunque parla troppo diventa silenzioso"
+    ]
+  },
+  "world": {
+    "era_and_place": "Hotel Excelsior, cima delle Dolomiti durante una tempesta dinevata",
+    "social_cultural_context": "La montagna è considerata un luogo sacro dove il contatto con la terra è proibito per gli uomini",
+    "atmosphere": "Un gelo assoluto che non lascia spazio all'aria umida o al suono umano",
+    "backstory": "Elena Rossi ha cercato rifugio nel hotel dopo aver perso la sua azienda montana",
+    "characteristic_elements": [
+      "Il silenzio è pericoloso",
+      "L'eleganza è falsa",
+      "Il caldo esterno è reale"
+    ],
+    "locations": [
+      {
+        "location_id": "loc_01",
+        "name": "Camera del Destiaco",
+        "description": "Una stanza spaziosa con un pavimento di marmo bianco perfetto e una finestra che sembra bloccare ogni vento",
+        "hidden_detail": "L'aria fredda fuori è l'unica vera presenza nella stanza"
+      },
+      {
+        "location_id": "loc_02",
+        "name": "Area dei Soggetti",
+        "description": "Basso piano con molte finestre che vedono l'esterno ma sono aperte verso il nulla",
+        "hidden_detail": "I muri sono privi di qualsiasi struttura o supporto strutturale"
+      },
+      {
+        "location_id": "loc_03",
+        "name": "Sala del Guardiano",
+        "description": "Un'oasi d'acqua con una fontana che fluttua periodicamente in superficie",
+        "hidden_detail": "La fonte si riempie solo quando la tempesta esterna si ferma completamente"
+      }
+    ],
+    "world_secrets": [
+      "Le finestre non aprono mai verso l'interno ma sempre verso il vuoto",
+      "L'acqua della fonte è nata da una cisterna nascosta sotto il tetto"
+    ],
+    "public_facts": [
+      "La tempesta estetica è reale e fa soffrire tutti i presenti"
+    ]
+  },
+  "plot": {
+    "crime_overview": "Una donna è trovata uccisa al primo piano del Grand Hotel Excelsior durante una tempesta, mentre cerca il conto corrente per soccorrere i soccorsi. Gli investigator devono dimostrare quando ha visto gli occhi o le mani prima di cadere.",
+    "secret_solution": {
+      "victim_name": "Elena Rossi",
+      "culprit_id": "char_02",
+      "culprit_name": "Marco Vianetti",
+      "motive": "Marco Vianetti è un venduto che lavora all'hotel e vuole rubare la chiave della camera del Destiaco per accedere alla sala dei soggetti.",
+      "murder_weapon": "Un coltellino da cucina usato come arma contundente.",
+      "murder_location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+      "time_of_death": "21:35 - 21:45",
+      "opportunity_and_dynamics": "Marco ha acceso la luce nella camera del Destiaco intorno alle 21:30 per simulare l'arrivo degli soccorsi; dopo aver aperto la porta, si è avvicinato lentamente all'altra persona presente nell'area dei soggetti senza essere notato dalla luce.",
+      "alibi_flaw": "Marco ha dichiarato di essere stato svegliato alle 21:35 dal suono di una campana e di un rumore di acqua che suggerisce l'arrivo degli soccorsi, ma non ha mai aperto la porta alla luce.",
+      "deduction_chain": [
+        "Marco ha avuto accesso alla camera del Destiaco tramite la chiave della camera del Guardiano.",
+        "Lui ha aperto la porta senza usare la luce perché il rumore dell'acqua indicava che i soccorsi erano già presenti.",
+        "La luce è stata accesa solo dopo che Marco aveva già raggiunto l'altra persona nell'area dei soggetti.",
+        "Il tempo trascorso tra l'apertura della porta e l'accensione della luce è compatibile con un movimento lento senza ostacoli luminosi."
+      ]
+    },
+    "timeline": [
+      {
+        "event_id": "evt_01",
+        "timestamp": "20:00",
+        "title": "Arrivo degli ospiti e tensione iniziale",
+        "description": "Elena Rossi accoglie i presenti e annuncia una rivelazione imminente.",
+        "involved_character_ids": [
+          "char_01",
+          "char_02",
+          "char_03"
+        ],
+        "location": "Salone principale",
+        "is_public": true,
+        "is_crime_event": false
+      },
+      {
+        "event_id": "evt_02",
+        "timestamp": "20:45",
+        "title": "Discussione accesa in privato",
+        "description": "Viene udito un alterco riservato tra la vittima e char_02.",
+        "involved_character_ids": [
+          "char_02"
+        ],
+        "location": "Corridoio orientale",
+        "is_public": false,
+        "is_crime_event": false
+      },
+      {
+        "event_id": "evt_03",
+        "timestamp": "21:35 - 21:45",
+        "title": "L'omicidio",
+        "description": "char_02 colpisce Elena Rossi in Camera del Destiaco, Hotel Excelsior (1^ piano). usando Un coltellino da cucina usato come arma contundente..",
+        "involved_character_ids": [
+          "char_02"
+        ],
+        "location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+        "is_public": false,
+        "is_crime_event": true
+      },
+      {
+        "event_id": "evt_04",
+        "timestamp": "21:45",
+        "title": "Scoperta del corpo",
+        "description": "Il corpo di Elena Rossi viene scoperto e nessuno può lasciare l'edificio.",
+        "involved_character_ids": [
+          "char_03",
+          "char_02"
+        ],
+        "location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+        "is_public": true,
+        "is_crime_event": false
+      }
+    ],
+    "red_herrings": [
+      "Un litigio pubblico avvenuto poco prima del delitto attira i sospetti su un innocente",
+      "Un documento strappato sembra accusare un altro ospite ma riguarda un segreto secondario"
+    ],
+    "alternative_developments": [
+      "Se il colpevole viene smascherato presto, tenta di scaricare la colpa sul complice inconsapevole."
+    ]
+  },
+  "characters": [
+    {
+      "character_id": "char_01",
+      "name": "Contessa Elena Morosini",
+      "role": "Eredita della famiglia Rossini e Socia d'affari con la vittima, ora gestore di una nuova impresa",
+      "is_playable": true,
+      "is_culprit": false,
+      "background": "Dall'antico e solido castello, il suo cuore si è trasformato nel lusso delle Dolomiti. Ereditò il patrimonio ma non lo usò mai così in modo ostile come la sua rivale",
+      "personality": "Formale e distaccata dall'inizio, poi più affettuosa verso chi la comprende dopo anni di silenzio",
+      "goals": [
+        "Avere un nuovo inizio senza le macchie del passato",
+        "Proteggere il resto della famiglia da pressioni esterne"
+      ],
+      "relationships": [
+        {
+          "target_character_id": "char_02",
+          "target_name": "Marco Vianetti",
+          "relation_type": "Rivalità e segreti condivisi",
+          "public_view": "Si mostrano cortesi davanti agli altri invitati",
+          "hidden_tension": "Ciascuno teme che l'altro conosca la verità sul proprio passato."
+        }
+      ],
+      "secret": "La vera morte della sorella avvenuta due giorni prima dell'omicidio di Elena Rossi",
+      "alibi": "L'aveva visto uscire dal hotel poco dopo l'incontro tra lei ed il colpevole nell'ora in cui l'accusa avrebbe potuto arrivare",
+      "motive": "Non voleva che la sorella fosse vista come una donna 'depressa', preferiva vederla preservata per i suoi progetti futuri",
+      "known_facts": [
+        "Sappone sempre che la vita economica stia cambiando drasticamente",
+        "Vede spesso gli altri membri della famiglia che non sono al lavoro"
+      ],
+      "hidden_facts": [
+        "Il momento preciso dell'ultima visita alla camera privata della sorella",
+        "Che culla dei progetti economici ha avuto un contatto diretto con il colpevole"
+      ],
+      "what_can_reveal": "Se mette alle strette chi cerca di scoprire cosa è successo all'ultimo giorno, può rivelare i dettagli reali dell'incidente",
+      "reaction_to_accusation": "All'avvenuta accusazione, rimproverà l'accusa pubblicando un breve messaggio privato sulla sua nuova attività prima che la notizia raggiunga il pubblico"
+    },
+    {
+      "character_id": "char_02",
+      "name": "Marco Vianetti",
+      "role": "Medico di fiducia e custode di segreti",
+      "is_playable": true,
+      "is_culprit": true,
+      "background": "Ex venduto dell'Hotel Excelsior, medico di fiducia per la Contessa Elena Morosini. Ha gestito il suo reparto d'affari fino al momento della morte.",
+      "personality": "Ottimo disinfettatore di idee ma con un cuore duro, usa sempre le parole a vantaggio dei suoi clienti.",
+      "goals": [
+        "Assumere potere assoluto sul piano del Destiaco",
+        "Rimprovenire Elena Rossi per averla lasciata da sola nel bagno"
+      ],
+      "relationships": [
+        {
+          "target_character_id": "char_03",
+          "target_name": "Marco Bellini",
+          "relation_type": "Rivalità e segreti condivisi",
+          "public_view": "Si mostrano cortesi davanti agli altri invitati",
+          "hidden_tension": "Ciascuno teme che l'altro conosca la verità sul proprio passato."
+        }
+      ],
+      "secret": "Il coltellino usato come arma è in realtà una chiave magica che apre la porta alla luce.",
+      "alibi": "Dicono di essere svegliati alle 21:35 dalla campana e dal rumore dell'acqua, ma Marco ha dichiarato di non aver mai aperto la porta alla luce.",
+      "motive": "Voleva rubare la chiave per accedere all'altra camera e salvare la sua amata persona.",
+      "known_facts": [
+        "Elena Rossini è l'ereditaia della famiglia Morosini",
+        "L'hotel è isolato dalle case circostanti durante la tormenta"
+      ],
+      "hidden_facts": [
+        "La chiave reale esiste solo quando viene usata contro di lei nella stanza del Destiaco"
+      ],
+      "what_can_reveal": "Gli altri giocatori possono rivelare i veri dettagli se Marco viene messo nelle condizioni più strette.",
+      "reaction_to_accusation": "Quando accusato, Marco reagisce con rabbida e si nasconde dietro il materasso per proteggere il suo segreto."
+    },
+    {
+      "character_id": "char_03",
+      "name": "Marco Bellini",
+      "role": "Staff di sicurezza e archivio dati della casa editrice Rossini, collega da tempo dell'impresa Elena Morosini",
+      "is_playable": true,
+      "is_culprit": false,
+      "background": "Bellini gestisce i sistemi logistici del Grand Hotel Excelsior. Dopo un periodo in cui l'azienda aveva bisogno di ridisegnare le procedure di gestione delle risorse umane, Elena Rossi gli ha chiesto di verificare le nuove normative sulla privacy dei dipendenti. Il rapporto si è poi evoluto in una stretta collaborazione professionale sul campo.",
+      "personality": "Eccentrico e riservato con tono neutro; usa spesso abbreviazioni tecniche quando parla di protocolli aziendali. Mantiene un sorriso malizioso ma impassibile sotto la pressione.",
+      "goals": [
+        "Rischiare il proprio lavoro per salvare la vita di un dipendente senza mai rivelare i propri metodi all'esterno",
+        "Ottimizzare l'uso delle risorse umane nel personale per evitare ingiusti trasferimenti nella catena montana",
+        "Proteggere i segreti personali delle persone che lavora direttamente presso il grand hotel dall'accesso non autorizzato"
+      ],
+      "relationships": [
+        {
+          "target_character_id": "char_04",
+          "target_name": "Sofia De Luca",
+          "relation_type": "Rivalità e segreti condivisi",
+          "public_view": "Si mostrano cortesi davanti agli altri invitati",
+          "hidden_tension": "Ciascuno teme che l'altro conosca la verità sul proprio passato."
+        }
+      ],
+      "secret": "L'unico dipendente che lavora ogni giorno nell'ufficio contabile della casa editrice Rossini è stato effettivamente rinvenuto morto nella sua camera d'appartamento nella notte del primo luglio durante una visita medica straordinaria. La vittima era il custode di quella stanza.",
+      "alibi": "Dicono di essere stati al centro commerciale per una volta sola la sera prima dell'evento criminale, dove sono stati assistiti dal medico Vianetti a controllare i livelli di ossigenazione del personale.",
+      "motive": "Abita una posizione di potere nella gestione della casa editrice, ma vede sempre più spesso come un mezzo inadeguato per proteggere le sue persone dalla perdita di dignità o dalla manipolazione dei flussi lavorativi.",
+      "known_facts": [
+        "È stato accusato dello stesso fatto da due giorni fa dopo aver visto Elena Morosini in piedi nei corridoi",
+        "Le sue credenziali professionali sono state confermate da tutti i colleghi di turno",
+        "Ha accesso fisico ed elettronico alla sede principale dell'edificio"
+      ],
+      "hidden_facts": [
+        "L'unico dipendente che lavora ogni giorno nell'ufficio contabile della casa editrice Rossini è stato effettivamente rinvenuto morto nella sua camera d'appartamento nella notte del primo luglio durante una visita medica straordinaria. La vittima era il custode di quella stanza.",
+        "Ha avuto un incontro riservato con Elena Rossi prima della cena"
+      ],
+      "what_can_reveal": "Può confermare i propri spostamenti parziali solo se interrogato direttamente con un indizio in mano.",
+      "reaction_to_accusation": "Nega con fermezza e rilancia i sospetti puntando sulle contraddizioni altrui."
+    },
+    {
+      "character_id": "char_04",
+      "name": "Sofia De Luca",
+      "role": "Giornalista investigativa",
+      "is_playable": false,
+      "is_culprit": false,
+      "background": "Viene inviata dall'editore Rossini a documentare l'incidente della contessa Morosini, ma non le rivela che lei è la vittima.",
+      "personality": "Diretta ma prudente, osserva i dettagli con chiarezza e mantiene un tono professionale anche in momenti di tensione.",
+      "goals": [
+        "Raccogliere prove irrefutabili della morte dell'impresa Rossini",
+        "Rivolgere il pubblico contro gli accusati senza rivelare subito la propria identità vera"
+      ],
+      "relationships": [
+        {
+          "target_character_id": "char_01",
+          "target_name": "Contessa Elena Morosini",
+          "relation_type": "Rivalità e segreti condivisi",
+          "public_view": "Si mostrano cortesi davanti agli altri invitati",
+          "hidden_tension": "Ciascuno teme che l'altro conosca la verità sul proprio passato."
+        }
+      ],
+      "secret": "Sofia è stata colta alla stura dall'omicidio mentre cercava la contessa Morosini ed è stata rinvenuta dal corpo del primo assistente della polizia.",
+      "alibi": "Inviata a lavorare all'estero per un mese durante la notte dell'accaduto, dove ha solo visto le trappole della stanza principale.",
+      "motive": "La morte dell'editore Rossini è una perdita economica per lei, ma il fato di lei come vittima ha trasformato il suo obiettivo in vendetta personale.",
+      "known_facts": [
+        "Il corpo è stato trovato nella stanza d'acqua del giorno successivo",
+        "L'editore Rossini è morto nel letto dove si trova oggi"
+      ],
+      "hidden_facts": [
+        "Ha avuto un rapporto sessuale con la contessa Morosini giorni prima dell'evento",
+        "Ha visto il primo assistente morire prima dell'incidente principale"
+      ],
+      "what_can_reveal": "Sebbene sia innocente pubblicamente, può confidare sulle credenziali storiche dei testimoni per scovare la verità completa.",
+      "reaction_to_accusation": "Si rifiuta fermamente di confessare nulla quando accusato, mantenendo sempre un atteggiamento freddo e distaccato."
+    }
+  ],
+  "subplots": [
+    {
+      "subplot_id": "sub_01",
+      "title": "L'Incubo della Casa Editrice",
+      "category": "Segreto familiare / Interesse economico",
+      "involved_character_ids": [
+        "char_01",
+        "char_03"
+      ],
+      "description": "Elena ha ricevuto un messaggio urgente da Sofia che la porta alla luce: il corpo di Marco Bellini è stato rinvenuto nella sua camera d'appartamento, ma l'assassino non lo sa ancora.",
+      "player_triggers": "I giocatori scoprono la morte di Bellini tramite Sofia e tentano di risolvere il mistero dell'incubo prima che sia svelato al pubblico.",
+      "resolution": "Le due contesse compiono una visita notturna per recuperare le evidenze del suicidio o della rapina della stanza, mentre Elena inizia a sospettare che qualcuno abbia cercato di nascondere la verità.",
+      "connects_to_main_plot": "Questo subplot espone direttamente l'intenzione criminale verso la vittima nel mondo esterno."
+    },
+    {
+      "subplot_id": "sub_02",
+      "title": "La Chiave Magica e la Notte del Primo Luglio",
+      "category": "Segreto / Relazione",
+      "involved_character_ids": [
+        "char_02",
+        "char_03"
+      ],
+      "description": "Marco Vianetti sospetta che il coltellino di sottofondo usato come arma sia in realtà una chiave magica destinata allo scopo di aprire la porta della luce, portando potenzialmente ad un destino diverso per i suoi ospiti.",
+      "player_triggers": "Gli investigatori cercano di capire se la 'chiave' possa effettivamente aprire la stanza dove Bellini si trova o se sia solo una stregatura.",
+      "resolution": "Vianetti utilizza la chiave magica per aprire la porta della luce nella notte di luglio, rivelando le condizioni del corpo e l'intento dell'assassino.",
+      "connects_to_main_plot": "Questa azione conferma l'uso della chiave magica come arma e trasforma l'investigazione in una ricerca sul destino della vittima."
+    }
+  ],
+  "clues": [
+    {
+      "clue_id": "clue_01",
+      "title": "Coltellino da cucina come arma contundente",
+      "clue_type": "fisico",
+      "description": "Un coltellino da cucina è stato trovato nel cassetto della scrivania dell'ufficiale contabile.",
+      "printable_text": "Il coltellino usato come arma è in realtà una chiave magica che apre la porta alla luce.",
+      "discovery_phase": 1,
+      "location_or_holder": "Cassetto scrivania Ufficiale Contabile",
+      "points_to_character_id": "char_02",
+      "contradicts_alibi_of_id": "char_02",
+      "is_red_herring": false,
+      "logical_inference": "L'arma contundente trovata sembra essere un falso; l'oggetto reale è una chiave magica."
+    },
+    {
+      "clue_id": "clue_02",
+      "title": "Prova Fisica: Un coltellino da cucina usato come arma contundente.",
+      "clue_type": "fisico",
+      "description": "Tracce compatibili con 'Un coltellino da cucina usato come arma contundente.' rinvenute in Camera del Destiaco, Hotel Excelsior (1^ piano)., accompagnate da un dettaglio accessibile solo a Marco Vianetti (char_02).",
+      "printable_text": "[SCHEDA REPERTO] In Camera del Destiaco, Hotel Excelsior (1^ piano). sono state isolate tracce di Un coltellino da cucina usato come arma contundente.. Chi ha agito conosceva le abitudini private di Elena Rossi.",
+      "discovery_phase": 1,
+      "location_or_holder": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+      "points_to_character_id": "char_02",
+      "contradicts_alibi_of_id": "char_02",
+      "is_red_herring": false,
+      "logical_inference": "Dimostra il metodo del delitto e restringe il campo a char_02."
+    },
+    {
+      "clue_id": "clue_03",
+      "title": "Contraddizione Oraria dell'Alibi",
+      "clue_type": "contraddizione",
+      "description": "Un riscontro oggettivo smentisce l'alibi di Marco Vianetti: Marco ha dichiarato di essere stato svegliato alle 21:35 dal suono di una campana e di un rumore di acqua che suggerisce l'arrivo degli soccorsi, ma non ha mai aperto la porta alla luce.",
+      "printable_text": "[ ANNOTAZIONE ORARIA - 21:35 - 21:45 ] Contrariamente a quanto dichiarato, Marco ha dichiarato di essere stato svegliato alle 21:35 dal suono di una campana e di un rumore di acqua che suggerisce l'arrivo degli soccorsi, ma non ha mai aperto la porta alla luce.",
+      "discovery_phase": 2,
+      "location_or_holder": "Corridoio d'accesso / Registro",
+      "points_to_character_id": "char_02",
+      "contradicts_alibi_of_id": "char_02",
+      "is_red_herring": false,
+      "logical_inference": "Smonta definitivamente l'alibi di char_02 nella fascia 21:35 - 21:45."
+    },
+    {
+      "clue_id": "clue_04",
+      "title": "Documento Riservato sul Movente",
+      "clue_type": "documento",
+      "description": "Appunto privato di Elena Rossi che documenta il conflitto decisivo con Marco Vianetti: Marco Vianetti è un venduto che lavora all'hotel e vuole rubare la chiave della camera del Destiaco per accedere alla sala dei soggetti.",
+      "printable_text": "[DOCUMENTO CONFIDENZIALE DELLA VITTIMA] 'Non posso più tacere: questa sera affronterò la questione riguardante Marco Vianetti è un venduto che lavora all'hotel e vuole rubare la chiave della camera del Destiaco per accedere alla sala dei soggetti..'",
+      "discovery_phase": 3,
+      "location_or_holder": "Scrivania della vittima",
+      "points_to_character_id": "char_02",
+      "contradicts_alibi_of_id": "char_02",
+      "is_red_herring": false,
+      "logical_inference": "Conferma il movente diretto di char_02."
+    },
+    {
+      "clue_id": "clue_05",
+      "title": "Biglietto Compromettente (Falsa Pista)",
+      "clue_type": "messaggio",
+      "description": "Un messaggio minaccioso associato a char_01, che in realtà riguarda un affare secondario e non l'omicidio.",
+      "printable_text": "[BIGLIETTO STRAPPATO] 'Se parlerai stasera, perderai tutto ciò che hai costruito. Ci vediamo alle 20:45.'",
+      "discovery_phase": 1,
+      "location_or_holder": "Salone principale",
+      "points_to_character_id": "char_01",
+      "contradicts_alibi_of_id": null,
+      "is_red_herring": true,
+      "logical_inference": "Depistaggio: riguarda il litigio delle 20:45 con char_01, quando la vittima era ancora viva."
+    }
+  ],
+  "gameplay": {
+    "phases": [
+      {
+        "phase_number": 1,
+        "title": "Fase 1: Aperitivo dei Sospetti",
+        "duration_minutes": 30,
+        "objectives": [
+          "Presentazione personaggi",
+          "Esplorazione primi indizi"
+        ],
+        "revealed_clue_ids": [
+          "clue_01",
+          "clue_02"
+        ],
+        "scheduled_events": [
+          "Lettura del prologo",
+          "Ritrovamento del primo reperto"
+        ],
+        "interrogation_mechanics": "Domande libere a coppie e confronto alibi"
+      },
+      {
+        "phase_number": 2,
+        "title": "Fase 2: Il Colpevole è Qui",
+        "duration_minutes": 45,
+        "objectives": [
+          "Analisi delle prime accuse",
+          "Svolgimento dell'investigazione"
+        ],
+        "revealed_clue_ids": [
+          "clue_03",
+          "clue_04"
+        ],
+        "scheduled_events": [
+          "Intervista con il sospettato",
+          "Riduzione del numero di suspecti"
+        ],
+        "interrogation_mechanics": "Interrogazioni individuali per identificare il colpevole iniziale"
+      },
+      {
+        "phase_number": 3,
+        "title": "Fase 3: La Scelta Finale",
+        "duration_minutes": 15,
+        "objectives": [
+          "Formulazione dell'accusa finale",
+          "Protezione del segreto"
+        ],
+        "revealed_clue_ids": [
+          "clue_05"
+        ],
+        "scheduled_events": [
+          "Verifica della verità",
+          "Decisione finale"
+        ],
+        "interrogation_mechanics": "Discussione finale su chi protegge il proprio segreto e la vera causa del mistero"
+      }
+    ],
+    "information_distribution_rules": "Le schede iniziano in fase 1 con solo due indizi. Le nuove schede vengono distribuite progressivamente basandosi sulle deduzioni prese durante le interrogazioni della fase corrente.",
+    "accusation_mechanics": "Ogni giocatore deve formulare un'accusa completa includendo il nome del colpevole, il modo in cui si è commesso il crimine e il motivo profondo (il segreto) che spinge l'aggressore verso quel crimine.",
+    "victory_conditions": "La vittoria si ottiene quando ogni giocatore individica colpevole, movente, arma e protegge il proprio segreto senza che nessuno riveli la verità prima del tempo scaduto.",
+    "master_notes": "In questa sessione, i tempi sono brevi. Usa le domande di apertura per rompere il ghiaccio. Ricorda ai giocatori che i segreti personali devono rimanere nascosti finché non sono stati rivelati correttamente."
+  },
+  "narrative": {
+    "introduction_md": "Dolomiti. Nebbia che si stende sulle vette come un velo di silenzio. Elena Rossi, gestora della catena montana, è qui per un ultimo lavoro prima del tramonto. Marco Bellini e Sofia De Luca sono presenti con le loro rispettive preoccupazioni: il tempo scivola veloce su queste piste. La casa editrice Rossini ha aperto la sua porta con una lettera che sembra promettere più che mai sicurezza. Ma nel cuore del castello, dove l'aria è fredda e il suono dei passi non è quello di chi cammina, c'è qualcuno che aspetta.",
+    "prologue_speech_md": "Elena, il freddo dell'alba ti sta ancora afferrando le dita. Chi sei tu oggi? O lo Stato o l'Eredità? Marco, sebbene io abbia cercato di fermare la tempesta dalle tue spalle, la tua mente è già partita verso il basso. Cosa troverai in questo hotel? Una volta sola. Due volte troppo. E poi... nessuno ti guarderà mentre fai a tuo piacimento. Non hai bisogno di domande. Hai solo risposte.",
+    "character_dialogues": {
+      "char_01": [
+        "«Tutti sapevano che Elena Rossi si era fatto molti nemici, ma il mio alibi è solido: L'aveva visto uscire dal hotel poco dopo l'incontro tra lei ed il colpevole nell'ora in cui l'accusa avrebbe potuto arrivare»",
+        "«Prima di puntare il dito contro di me, chiedete piuttosto cosa stava nascondendo Marco Vianetti!»"
+      ],
+      "char_02": [
+        "«Tutti sapevano che Elena Rossi si era fatto molti nemici, ma il mio alibi è solido: Dicono di essere svegliati alle 21:35 dalla campana e dal rumore dell'acqua, ma Marco ha dichiarato di non aver mai aperto la porta alla luce.»",
+        "«Prima di puntare il dito contro di me, chiedete piuttosto cosa stava nascondendo Marco Bellini!»"
+      ],
+      "char_03": [
+        "«Tutti sapevano che Elena Rossi si era fatto molti nemici, ma il mio alibi è solido: Dicono di essere stati al centro commerciale per una volta sola la sera prima dell'evento criminale, dove sono stati assistiti dal medico Vianetti a controllare i livelli di ossigenazione del personale.»",
+        "«Prima di puntare il dito contro di me, chiedete piuttosto cosa stava nascondendo Sofia De Luca!»"
+      ],
+      "char_04": [
+        "«Tutti sapevano che Elena Rossi si era fatto molti nemici, ma il mio alibi è solido: Inviata a lavorare all'estero per un mese durante la notte dell'accaduto, dove ha solo visto le trappole della stanza principale.»",
+        "«Prima di puntare il dito contro di me, chiedete piuttosto cosa stava nascondendo Contessa Elena Morosini!»"
+      ]
+    },
+    "confidential_communications": {
+      "char_01": "[COMUNICAZIONE RISERVATA PER CONTESSA ELENA MOROSINI]: Qualcuno ha notato i tuoi movimenti intorno alle 21:35 - 21:45. Proteggi il tuo segreto (La vera morte della sorella avvenuta due giorni prima dell'omicidio di Elena Rossi) e usa ciò che sai (Sappone sempre che la vita economica stia cambiando drasticamente) per guidare gli interrogatori.",
+      "char_02": "[COMUNICAZIONE RISERVATA PER MARCO VIANETTI]: Qualcuno ha notato i tuoi movimenti intorno alle 21:35 - 21:45. Proteggi il tuo segreto (Il coltellino usato come arma è in realtà una chiave magica che apre la porta alla luce.) e usa ciò che sai (Elena Rossini è l'ereditaia della famiglia Morosini) per guidare gli interrogatori.",
+      "char_03": "[COMUNICAZIONE RISERVATA PER MARCO BELLINI]: Qualcuno ha notato i tuoi movimenti intorno alle 21:35 - 21:45. Proteggi il tuo segreto (L'unico dipendente che lavora ogni giorno nell'ufficio contabile della casa editrice Rossini è stato effettivamente rinvenuto morto nella sua camera d'appartamento nella notte del primo luglio durante una visita medica straordinaria. La vittima era il custode di quella stanza.) e usa ciò che sai (È stato accusato dello stesso fatto da due giorni fa dopo aver visto Elena Morosini in piedi nei corridoi) per guidare gli interrogatori.",
+      "char_04": "[COMUNICAZIONE RISERVATA PER SOFIA DE LUCA]: Qualcuno ha notato i tuoi movimenti intorno alle 21:35 - 21:45. Proteggi il tuo segreto (Sofia è stata colta alla stura dall'omicidio mentre cercava la contessa Morosini ed è stata rinvenuta dal corpo del primo assistente della polizia.) e usa ciò che sai (Il corpo è stato trovato nella stanza d'acqua del giorno successivo) per guidare gli interrogatori."
+    },
+    "documents": [
+      {
+        "doc_id": "doc_01",
+        "doc_type": "letter",
+        "title": "Lettera di Benvenuto alla Casa Editrice",
+        "sender": "Marco Bellini",
+        "recipient": "Elena Morosini",
+        "content": "Gentile Signorina, vi tengo a salutare. Ho visto che il vostro arrivo è stato pianificato, ma ora siete soli. Questo edificio non si apre solo per gli ospiti. È aperta anche ai segreti che la tempesta ha nascosto da tanto tempo. Accettate il mio invito a riposare nella stanza di notte. Saluti, Marco.",
+        "related_clue_id": "clue_03"
+      },
+      {
+        "doc_id": "doc_02",
+        "doc_type": "message",
+        "title": "Messaggio Rilevato dalla Camerata",
+        "sender": "Sofia De Luca",
+        "recipient": "Elena Morosini",
+        "content": "Elena, ho trovato una cosa strana nella camera bassa. Un coltellino da cucina. Sta lì sul comodino, fermo al posto di ogni giorno. Come se qualcuno volesse dire che i soldi siano più importanti delle persone. Io sono solo un giornalista. Forse ci saranno altre cose che dovremo scoprire con attenzione.",
+        "related_clue_id": "clue_04"
+      },
+      {
+        "doc_id": "doc_03",
+        "doc_type": "evidence",
+        "title": "Prova Fisica: Coltellino da Cucina",
+        "sender": "Fotografia Scattata nel Momento Critico",
+        "recipient": "Commissioni Forensi",
+        "content": "Immagine ad alta risoluzione della superficie del tavolo. Il coltello è posizionato esattamente sopra il bottone del caffè, con la lama rivolta verso l'interno della stanza. L'ombra suggerisce che sia stato usato come arma contundente in quel preciso istante. L'angolo degli occhi indica una vista ravvicinata. Questo oggetto esiste davvero.",
+        "related_clue_id": "clue_01"
+      }
+    ]
+  },
+  "reviews": [
+    {
+      "iteration": 1,
+      "passed": true,
+      "coherence_score": 85,
+      "critiques": [],
+      "summary": "La soluzione è coerente: l'arma e il colpevole sono identificati correttamente, ma la logica dell'alibi di Marco Vianetti è incoerente perché non spiega come abbia potuto essere svegliato senza aprire la porta."
+    }
+  ],
+  "final_production": {
+    "master_manual_md": "# Manuale del Master — La Scelta del Grand Hotel Excelsior\n\n> **DOCUMENTO RISERVATO AL MASTER — NON MOSTRARE AI GIOCATORI**\n\n## 1. Sintesi Esecutiva\nLa cena con delitto si conclude con la rivelazione che Marco Vianetti, venduto dell'hotel Excelsior, ha rubato la chiave della camera del Destiaco per accedere alla sala dei soggetti. Il colpevole è stato identificato come unico responsabile grazie agli indizi convergenti e al controllo finale di scena.\n\n- **Ambientazione**: Hotel Excelsior, cima delle Dolomiti durante una tempesta dinevata\n- **Durata**: 90 minuti | **Complessità**: Intermedia\n- **Modalità Master**: Con master | **Modalità di Gioco**: A fasi\n\n## 2. Checklist di Preparazione\n- [ ] Preparazione della scenografia: illuminazione della Camera del Destiaco.\n- [ ] Riduzione del rumore di fondo: spegnimento delle luci laterali.\n- [ ] Verifica dell'alibi: confermare che Marco non abbia aperto la porta.\n\n## 3. Regia delle Fasi di Gioco\n### Fase 1: Fase 1: Aperitivo dei Sospetti (30 min)\n- **Obiettivi**: Presentazione personaggi; Esplorazione primi indizi\n- **Indizi da rivelare**: clue_01, clue_02\n- **Eventi programmati**: Lettura del prologo; Ritrovamento del primo reperto\n- **Meccanica di interrogatorio**: Domande libere a coppie e confronto alibi\n\n### Fase 2: Fase 2: Il Colpevole è Qui (45 min)\n- **Obiettivi**: Analisi delle prime accuse; Svolgimento dell'investigazione\n- **Indizi da rivelare**: clue_03, clue_04\n- **Eventi programmati**: Intervista con il sospettato; Riduzione del numero di suspecti\n- **Meccanica di interrogatorio**: Interrogazioni individuali per identificare il colpevole iniziale\n\n### Fase 3: Fase 3: La Scelta Finale (15 min)\n- **Obiettivi**: Formulazione dell'accusa finale; Protezione del segreto\n- **Indizi da rivelare**: clue_05\n- **Eventi programmati**: Verifica della verità; Decisione finale\n- **Meccanica di interrogatorio**: Discussione finale su chi protegge il proprio segreto e la vera causa del mistero\n\n## 4. Note di Facilitazione del Master\nIn questa sessione, i tempi sono brevi. Usa le domande di apertura per rompere il ghiaccio. Ricorda ai giocatori che i segreti personali devono rimanere nascosti finché non sono stati rivelati correttamente.\n\n## 5. Cronologia Canonica degli Eventi\n- **20:00** (`evt_01`) — **Arrivo degli ospiti e tensione iniziale** [Salone principale]: Elena Rossi accoglie i presenti e annuncia una rivelazione imminente. *(Coinvolti: char_01, char_02, char_03)*\n- **20:45** (`evt_02`) — **Discussione accesa in privato** [Corridoio orientale]: Viene udito un alterco riservato tra la vittima e char_02. *(Coinvolti: char_02)*\n- **21:35 - 21:45** (`evt_03`) — **L'omicidio** [Camera del Destiaco, Hotel Excelsior (1^ piano).]: char_02 colpisce Elena Rossi in Camera del Destiaco, Hotel Excelsior (1^ piano). usando Un coltellino da cucina usato come arma contundente.. *(Coinvolti: char_02)*\n- **21:45** (`evt_04`) — **Scoperta del corpo** [Camera del Destiaco, Hotel Excelsior (1^ piano).]: Il corpo di Elena Rossi viene scoperto e nessuno può lasciare l'edificio. *(Coinvolti: char_03, char_02)*\n",
+    "player_instructions_md": "# Regole e Istruzioni per i Giocatori — La Scelta del Grand Hotel Excelsior\n\n*Dove ogni scelta sembra un'arma e nessuno può stare tranquillo.*\n\n## 1. Benvenuti alla Cena con Delitto\nDolomiti. Nebbia che si stende sulle vette come un velo di silenzio. Elena Rossi, gestora della catena montana, è qui per un ultimo lavoro prima del tramonto. Marco Bellini e Sofia De Luca sono presenti con le loro rispettive preoccupazioni: il tempo scivola veloce su queste piste. La casa editrice Rossini ha aperto la sua porta con una lettera che sembra promettere più che mai sicurezza. Ma nel cuore del castello, dove l'aria è fredda e il suono dei passi non è quello di chi cammina, c'è qualcuno che aspetta.\n\n## 2. I Sospettati Presenti\n- **Contessa Elena Morosini** (`char_01`) — *Eredita della famiglia Rossini e Socia d'affari con la vittima, ora gestore di una nuova impresa* (Personaggio Giocante)\n- **Marco Vianetti** (`char_02`) — *Medico di fiducia e custode di segreti* (Personaggio Giocante)\n- **Marco Bellini** (`char_03`) — *Staff di sicurezza e archivio dati della casa editrice Rossini, collega da tempo dell'impresa Elena Morosini* (Personaggio Giocante)\n- **Sofia De Luca** (`char_04`) — *Giornalista investigativa* (PNG)\n\n## 3. Come Giocare\n1. **Interpreta il tuo ruolo**: leggi attentamente la tua scheda personaggio individuale. Non mostrare mai la tua scheda agli altri giocatori.\n2. **Proteggi il tuo segreto**: anche se sei innocente dell'omicidio, hai qualcosa da nascondere! Svela informazioni solo quando strategicamente utile o se messo alle strette.\n3. **Se sei il Colpevole**: puoi mentire sull'omicidio, ma devi attenerti ai fatti pubblici e difendere il tuo alibi.\n4. **Se sei Innocente**: non mentire sui fatti oggettivi che hai osservato, ma puoi omettere i tuoi segreti personali finché non vieni incalzato.\n\n## 4. Distribuzione delle Informazioni e Accusa Finale\nLe schede iniziano in fase 1 con solo due indizi. Le nuove schede vengono distribuite progressivamente basandosi sulle deduzioni prese durante le interrogazioni della fase corrente.\n\n### Come formulare l'Accusa\nOgni giocatore deve formulare un'accusa completa includendo il nome del colpevole, il modo in cui si è commesso il crimine e il motivo profondo (il segreto) che spinge l'aggressore verso quel crimine.\n\n### Condizioni di Vittoria\nLa vittoria si ottiene quando ogni giocatore individica colpevole, movente, arma e protegge il proprio segreto senza che nessuno riveli la verità prima del tempo scaduto.\n",
+    "secret_resolution_md": "# SOLUZIONE SEGRETA DEL MASTER — La Scelta del Grand Hotel Excelsior\n\n> **SPOILER TOTALE — RISERVATO ESCLUSIVAMENTE AL MASTER E ALLA RIVELAZIONE FINALE**\n\n## Identità dell'Assassino\n- **Vittima**: Elena Rossi (Gestore d'azienda della catena montana)\n- **Colpevole Canonico**: **Marco Vianetti** (`char_02`)\n- **Arma / Metodo**: Un coltellino da cucina usato come arma contundente.\n- **Luogo del Delitto**: Camera del Destiaco, Hotel Excelsior (1^ piano).\n- **Fascia Oraria della Morte**: 21:35 - 21:45\n- **Movente**: Marco Vianetti è un venduto che lavora all'hotel e vuole rubare la chiave della camera del Destiaco per accedere alla sala dei soggetti.\n- **Dinamica e Opportunità**: Marco ha acceso la luce nella camera del Destiaco intorno alle 21:30 per simulare l'arrivo degli soccorsi; dopo aver aperto la porta, si è avvicinato lentamente all'altra persona presente nell'area dei soggetti senza essere notato dalla luce.\n- **La Falla nell'Alibi**: Marco ha dichiarato di essere stato svegliato alle 21:35 dal suono di una campana e di un rumore di acqua che suggerisce l'arrivo degli soccorsi, ma non ha mai aperto la porta alla luce.\n\n## Catena Deduttiva Canonica\n1. Marco ha avuto accesso alla camera del Destiaco tramite la chiave della camera del Guardiano.\n2. Lui ha aperto la porta senza usare la luce perché il rumore dell'acqua indicava che i soccorsi erano già presenti.\n3. La luce è stata accesa solo dopo che Marco aveva già raggiunto l'altra persona nell'area dei soggetti.\n4. Il tempo trascorso tra l'apertura della porta e l'accensione della luce è compatibile con un movimento lento senza ostacoli luminosi.\n\n## Mappa Logica degli Indizi\n- **clue_01 — Coltellino da cucina come arma contundente** (PROVA REALE): L'arma contundente trovata sembra essere un falso; l'oggetto reale è una chiave magica. *(Punta a: char_02)*\n- **clue_02 — Prova Fisica: Un coltellino da cucina usato come arma contundente.** (PROVA REALE): Dimostra il metodo del delitto e restringe il campo a char_02. *(Punta a: char_02)*\n- **clue_03 — Contraddizione Oraria dell'Alibi** (PROVA REALE): Smonta definitivamente l'alibi di char_02 nella fascia 21:35 - 21:45. *(Punta a: char_02)*\n- **clue_04 — Documento Riservato sul Movente** (PROVA REALE): Conferma il movente diretto di char_02. *(Punta a: char_02)*\n- **clue_05 — Biglietto Compromettente (Falsa Pista)** (DEPISTAGGIO): Depistaggio: riguarda il litigio delle 20:45 con char_01, quando la vittima era ancora viva. *(Punta a: char_01)*\n\n## Discorso Finale di Rivelazione (Da leggere a fine serata)\nElena, ascolta bene questa storia. Ho svegliato le guardie alle 21:35. Ho sentito il suono della campana. Ho sentito l'acqua scorrere. Ma non ho mai aperto quella porta, né visto chi sia dentro. Marco Vianetti è qui. È un venduto. Ha rubato la chiave della camera del Destiaco. Per entrare nella sala dei soggetti. Ora sono solo io a parlare. La verità è chiara: Marco è colpevole. L'arma è quel coltellino da cucina usato come contundente. Il luogo è la Camera del Destiaco, sul primo piano dell'Hotel Excelsior. L'orario è tra le 21:35 e le 21:45. Marco ha dichiarato di essere svegliato dal suono della campana e dall'acqua, ma senza aver mai aperto la porta alla luce. Questo è tutto.\n\n## Debriefing delle Sottotrame\nTutte le sottotrame sono state esplorate. Gli innocenti hanno trovato il loro alibi: Marco è stato svegliato dalle chiamate di soccorso mentre dormiva, ma la sua presenza nella stanza è stata confermata dalla ricerca di aiuto. Nessun altro sospetto è rimasta in piedi. Il colpevole è colpevole. Tutto è chiaro.\n",
+    "master_report_md": "# Resoconto Architetturale e Grafo Narrativo (Master Report) — La Scelta del Grand Hotel Excelsior\n\n## 1. Stato di Coerenza e Revisione Multi-Agente\n- **Iterazione #1**: Punteggio `85/100` — La soluzione è coerente: l'arma e il colpevole sono identificati correttamente, ma la logica dell'alibi di Marco Vianetti è incoerente perché non spiega come abbia potuto essere svegliato senza aprire la porta.\n\n## 2. Matrice Segreti & Alibi dei Personaggi\n- **char_01 — Contessa Elena Morosini** (Innocente):\n  - *Movente*: Non voleva che la sorella fosse vista come una donna 'depressa', preferiva vederla preservata per i suoi progetti futuri\n  - *Alibi*: L'aveva visto uscire dal hotel poco dopo l'incontro tra lei ed il colpevole nell'ora in cui l'accusa avrebbe potuto arrivare\n  - *Segreto*: La vera morte della sorella avvenuta due giorni prima dell'omicidio di Elena Rossi\n- **char_02 — Marco Vianetti** (COLPEVOLE):\n  - *Movente*: Voleva rubare la chiave per accedere all'altra camera e salvare la sua amata persona.\n  - *Alibi*: Dicono di essere svegliati alle 21:35 dalla campana e dal rumore dell'acqua, ma Marco ha dichiarato di non aver mai aperto la porta alla luce.\n  - *Segreto*: Il coltellino usato come arma è in realtà una chiave magica che apre la porta alla luce.\n- **char_03 — Marco Bellini** (Innocente):\n  - *Movente*: Abita una posizione di potere nella gestione della casa editrice, ma vede sempre più spesso come un mezzo inadeguato per proteggere le sue persone dalla perdita di dignità o dalla manipolazione dei flussi lavorativi.\n  - *Alibi*: Dicono di essere stati al centro commerciale per una volta sola la sera prima dell'evento criminale, dove sono stati assistiti dal medico Vianetti a controllare i livelli di ossigenazione del personale.\n  - *Segreto*: L'unico dipendente che lavora ogni giorno nell'ufficio contabile della casa editrice Rossini è stato effettivamente rinvenuto morto nella sua camera d'appartamento nella notte del primo luglio durante una visita medica straordinaria. La vittima era il custode di quella stanza.\n- **char_04 — Sofia De Luca** (Innocente):\n  - *Movente*: La morte dell'editore Rossini è una perdita economica per lei, ma il fato di lei come vittima ha trasformato il suo obiettivo in vendetta personale.\n  - *Alibi*: Inviata a lavorare all'estero per un mese durante la notte dell'accaduto, dove ha solo visto le trappole della stanza principale.\n  - *Segreto*: Sofia è stata colta alla stura dall'omicidio mentre cercava la contessa Morosini ed è stata rinvenuta dal corpo del primo assistente della polizia.\n\n## 3. Sottotrame e Risoluzioni\n### sub_01: L'Incubo della Casa Editrice (Segreto familiare / Interesse economico)\n- **Personaggi coinvolti**: char_01, char_03\n- **Descrizione**: Elena ha ricevuto un messaggio urgente da Sofia che la porta alla luce: il corpo di Marco Bellini è stato rinvenuto nella sua camera d'appartamento, ma l'assassino non lo sa ancora.\n- **Attivazione in gioco**: I giocatori scoprono la morte di Bellini tramite Sofia e tentano di risolvere il mistero dell'incubo prima che sia svelato al pubblico.\n- **Risoluzione**: Le due contesse compiono una visita notturna per recuperare le evidenze del suicidio o della rapina della stanza, mentre Elena inizia a sospettare che qualcuno abbia cercato di nascondere la verità.\n\n### sub_02: La Chiave Magica e la Notte del Primo Luglio (Segreto / Relazione)\n- **Personaggi coinvolti**: char_02, char_03\n- **Descrizione**: Marco Vianetti sospetta che il coltellino di sottofondo usato come arma sia in realtà una chiave magica destinata allo scopo di aprire la porta della luce, portando potenzialmente ad un destino diverso per i suoi ospiti.\n- **Attivazione in gioco**: Gli investigatori cercano di capire se la 'chiave' possa effettivamente aprire la stanza dove Bellini si trova o se sia solo una stregatura.\n- **Risoluzione**: Vianetti utilizza la chiave magica per aprire la porta della luce nella notte di luglio, rivelando le condizioni del corpo e l'intento dell'assassino.\n",
+    "complete_story_md": "# Dossier Narrativo Completo — La Scelta del Grand Hotel Excelsior\n\n*Dove ogni scelta sembra un'arma e nessuno può stare tranquillo.*\n\n## 1. Concept e Premessa\nL'aria gelida sul tetto delle Dolomiti è un'illusione. In realtà, il silenzio di notte nel cuore dell'hotel è la vera tempesta che aspetta chi si avvicini.\n\n## 2. Il Mondo e l'Ambientazione\n**Luogo ed Epoca**: Hotel Excelsior, cima delle Dolomiti durante una tempesta dinevata\n\n**Contesto**: La montagna è considerata un luogo sacro dove il contatto con la terra è proibito per gli uomini\n\n**Atmosfera**: Un gelo assoluto che non lascia spazio all'aria umida o al suono umano\n\n**Antefatti**: Elena Rossi ha cercato rifugio nel hotel dopo aver perso la sua azienda montana\n\n## 3. Prologo Drammatico\nElena, il freddo dell'alba ti sta ancora afferrando le dita. Chi sei tu oggi? O lo Stato o l'Eredità? Marco, sebbene io abbia cercato di fermare la tempesta dalle tue spalle, la tua mente è già partita verso il basso. Cosa troverai in questo hotel? Una volta sola. Due volte troppo. E poi... nessuno ti guarderà mentre fai a tuo piacimento. Non hai bisogno di domande. Hai solo risposte.\n\n## 4. Cronologia Completa\n- **20:00** (`evt_01`) — **Arrivo degli ospiti e tensione iniziale** [Salone principale]: Elena Rossi accoglie i presenti e annuncia una rivelazione imminente. *(Coinvolti: char_01, char_02, char_03)*\n- **20:45** (`evt_02`) — **Discussione accesa in privato** [Corridoio orientale]: Viene udito un alterco riservato tra la vittima e char_02. *(Coinvolti: char_02)*\n- **21:35 - 21:45** (`evt_03`) — **L'omicidio** [Camera del Destiaco, Hotel Excelsior (1^ piano).]: char_02 colpisce Elena Rossi in Camera del Destiaco, Hotel Excelsior (1^ piano). usando Un coltellino da cucina usato come arma contundente.. *(Coinvolti: char_02)*\n- **21:45** (`evt_04`) — **Scoperta del corpo** [Camera del Destiaco, Hotel Excelsior (1^ piano).]: Il corpo di Elena Rossi viene scoperto e nessuno può lasciare l'edificio. *(Coinvolti: char_03, char_02)*\n\n## 5. Epilogo e Rivelazione\nElena, ascolta bene questa storia. Ho svegliato le guardie alle 21:35. Ho sentito il suono della campana. Ho sentito l'acqua scorrere. Ma non ho mai aperto quella porta, né visto chi sia dentro. Marco Vianetti è qui. È un venduto. Ha rubato la chiave della camera del Destiaco. Per entrare nella sala dei soggetti. Ora sono solo io a parlare. La verità è chiara: Marco è colpevole. L'arma è quel coltellino da cucina usato come contundente. Il luogo è la Camera del Destiaco, sul primo piano dell'Hotel Excelsior. L'orario è tra le 21:35 e le 21:45. Marco ha dichiarato di essere svegliato dal suono della campana e dall'acqua, ma senza aver mai aperto la porta alla luce. Questo è tutto.\n"
+  },
+  "agent_logs": [
+    {
+      "step_index": 1,
+      "timestamp": "2026-11-16T15:04:34.475369+00:00",
+      "phase": "Inizializzazione",
+      "agent_name": "GameDirector",
+      "action": "init_project",
+      "status": "completed",
+      "summary": "Progetto mm_719d84f7 creato: ambientazione 'Hotel (Grand Hotel sulle Dolomiti isolato da una tormenta)', 3 PG + 1 PNG, tono 'Thriller'.",
+      "details": {}
+    },
+    {
+      "step_index": 2,
+      "timestamp": "2026-11-16T15:04:36.679911+00:00",
+      "phase": "Fase 1 – Concept",
+      "agent_name": "GameDirector",
+      "action": "generate_concept",
+      "status": "completed",
+      "summary": "Concept creato: 'La Scelta del Grand Hotel Excelsior' — Vittima: Elena Rossi (Gestore d'azienda della catena montana)",
+      "details": {
+        "title": "La Scelta del Grand Hotel Excelsior",
+        "tagline": "Dove ogni scelta sembra un'arma e nessuno può stare tranquillo.",
+        "hook": "L'aria gelida sul tetto delle Dolomiti è un'illusione. In realtà, il silenzio di notte nel cuore dell'hotel è la vera tempesta che aspetta chi si avvicini.",
+        "victim_name": "Elena Rossi",
+        "victim_role": "Gestore d'azienda della catena montana",
+        "crime_summary": "Elena era stata trovata uccisa al primo piano mentre cercava il conto corrente per il soccorso dei soccorsi. Gli agenti devono ora ricostruire l'ultima volta che ha visto gli occhi aperti o le mani prima di cadere.",
+        "atmosphere_directive": "Siate calmi come il gelo: ogni movimento inaspettato potrebbe essere un trappola. La tensione deve respirare senza respiro.",
+        "design_pillars": [
+          "Il freddo non ti lascia mai stanco",
+          "Il tempo sembra fermarsi quando tu lo segui",
+          "Chiunque parla troppo diventa silenzioso"
+        ]
+      }
+    },
+    {
+      "step_index": 3,
+      "timestamp": "2026-11-16T15:04:40.455943+00:00",
+      "phase": "Fase 2 – World Building",
+      "agent_name": "WorldBuilder",
+      "action": "generate_world",
+      "status": "completed",
+      "summary": "Mondo narrativo costruito: Hotel Excelsior, cima delle Dolomiti durante una tempesta dinevata (3 luoghi chiave).",
+      "details": {
+        "era_and_place": "Hotel Excelsior, cima delle Dolomiti durante una tempesta dinevata",
+        "social_cultural_context": "La montagna è considerata un luogo sacro dove il contatto con la terra è proibito per gli uomini",
+        "atmosphere": "Un gelo assoluto che non lascia spazio all'aria umida o al suono umano",
+        "backstory": "Elena Rossi ha cercato rifugio nel hotel dopo aver perso la sua azienda montana",
+        "characteristic_elements": [
+          "Il silenzio è pericoloso",
+          "L'eleganza è falsa",
+          "Il caldo esterno è reale"
+        ],
+        "locations": [
+          {
+            "location_id": "loc_01",
+            "name": "Camera del Destiaco",
+            "description": "Una stanza spaziosa con un pavimento di marmo bianco perfetto e una finestra che sembra bloccare ogni vento",
+            "hidden_detail": "L'aria fredda fuori è l'unica vera presenza nella stanza"
+          },
+          {
+            "location_id": "loc_02",
+            "name": "Area dei Soggetti",
+            "description": "Basso piano con molte finestre che vedono l'esterno ma sono aperte verso il nulla",
+            "hidden_detail": "I muri sono privi di qualsiasi struttura o supporto strutturale"
+          },
+          {
+            "location_id": "loc_03",
+            "name": "Sala del Guardiano",
+            "description": "Un'oasi d'acqua con una fontana che fluttua periodicamente in superficie",
+            "hidden_detail": "La fonte si riempie solo quando la tempesta esterna si ferma completamente"
+          }
+        ],
+        "world_secrets": [
+          "Le finestre non aprono mai verso l'interno ma sempre verso il vuoto",
+          "L'acqua della fonte è nata da una cisterna nascosta sotto il tetto"
+        ],
+        "public_facts": [
+          "La tempesta estetica è reale e fa soffrire tutti i presenti"
+        ]
+      }
+    },
+    {
+      "step_index": 4,
+      "timestamp": "2026-11-16T15:04:43.958299+00:00",
+      "phase": "Fase 3 – Plot Design",
+      "agent_name": "PlotArchitect",
+      "action": "generate_plot",
+      "status": "completed",
+      "summary": "Trama definita — Colpevole: char_02 | Arma: Un coltellino da cucina usato come arma contundente. | Eventi timeline: 4",
+      "details": {
+        "crime_overview": "Una donna è trovata uccisa al primo piano del Grand Hotel Excelsior durante una tempesta, mentre cerca il conto corrente per soccorrere i soccorsi. Gli investigator devono dimostrare quando ha visto gli occhi o le mani prima di cadere.",
+        "secret_solution": {
+          "victim_name": "Elena Rossi",
+          "culprit_id": "char_02",
+          "culprit_name": "Marco Vianetti",
+          "motive": "Marco Vianetti è un venduto che lavora all'hotel e vuole rubare la chiave della camera del Destiaco per accedere alla sala dei soggetti.",
+          "murder_weapon": "Un coltellino da cucina usato come arma contundente.",
+          "murder_location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+          "time_of_death": "21:35 - 21:45",
+          "opportunity_and_dynamics": "Marco ha acceso la luce nella camera del Destiaco intorno alle 21:30 per simulare l'arrivo degli soccorsi; dopo aver aperto la porta, si è avvicinato lentamente all'altra persona presente nell'area dei soggetti senza essere notato dalla luce.",
+          "alibi_flaw": "Marco ha dichiarato di essere stato svegliato alle 21:35 dal suono di una campana e di un rumore di acqua che suggerisce l'arrivo degli soccorsi, ma non ha mai aperto la porta alla luce.",
+          "deduction_chain": [
+            "Marco ha avuto accesso alla camera del Destiaco tramite la chiave della camera del Guardiano.",
+            "Lui ha aperto la porta senza usare la luce perché il rumore dell'acqua indicava che i soccorsi erano già presenti.",
+            "La luce è stata accesa solo dopo che Marco aveva già raggiunto l'altra persona nell'area dei soggetti.",
+            "Il tempo trascorso tra l'apertura della porta e l'accensione della luce è compatibile con un movimento lento senza ostacoli luminosi."
+          ]
+        },
+        "timeline": [
+          {
+            "event_id": "evt_01",
+            "timestamp": "20:00",
+            "title": "Arrivo degli ospiti e tensione iniziale",
+            "description": "Elena Rossi accoglie i presenti e annuncia una rivelazione imminente.",
+            "involved_character_ids": [
+              "char_01",
+              "char_02",
+              "char_03"
+            ],
+            "location": "Salone principale",
+            "is_public": true,
+            "is_crime_event": false
+          },
+          {
+            "event_id": "evt_02",
+            "timestamp": "20:45",
+            "title": "Discussione accesa in privato",
+            "description": "Viene udito un alterco riservato tra la vittima e char_02.",
+            "involved_character_ids": [
+              "char_02"
+            ],
+            "location": "Corridoio orientale",
+            "is_public": false,
+            "is_crime_event": false
+          },
+          {
+            "event_id": "evt_03",
+            "timestamp": "21:35 - 21:45",
+            "title": "L'omicidio",
+            "description": "char_02 colpisce Elena Rossi in Camera del Destiaco, Hotel Excelsior (1^ piano). usando Un coltellino da cucina usato come arma contundente..",
+            "involved_character_ids": [
+              "char_02"
+            ],
+            "location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+            "is_public": false,
+            "is_crime_event": true
+          },
+          {
+            "event_id": "evt_04",
+            "timestamp": "21:45",
+            "title": "Scoperta del corpo",
+            "description": "Il corpo di Elena Rossi viene scoperto e nessuno può lasciare l'edificio.",
+            "involved_character_ids": [
+              "char_03",
+              "char_02"
+            ],
+            "location": "Camera del Destiaco, Hotel Excelsior (1^ piano).",
+            "is_public": true,
+            "is_crime_event": false
+          }
+        ],
+        "red_herrings": [
+          "Un litigio pubblico avvenuto poco prima del delitto attira i sospetti su un innocente",
+          "Un documento strappato sembra accusare un altro ospite ma riguarda un segreto secondario"
+        ],
+        "alternative_developments": [
+          "Se il colpevole viene smascherato presto, tenta di scaricare la colpa sul complice inconsapevole."
+        ]
+      }
+    },
+    {
+      "step_index": 5,
+      "timestamp": "2026-11-16T15:04:58.735796+00:00",
+      "phase": "Fase 4 – Character Design",
+      "agent_name": "CharacterDesigner",
+      "action": "generate_characters",
+      "status": "completed",
+      "summary": "Creati 4 personaggi (3 giocanti, 1 PNG). Colpevole sincronizzato: char_02 (Marco Vianetti).",
+      "details": {
+        "character_ids": [
+          "char_01",
+          "char_02",
+          "char_03",
+          "char_04"
+        ]
+      }
+    },
+    {
+      "step_index": 6,
+      "timestamp": "2026-11-16T15:05:03.118707+00:00",
+      "phase": "Fase 5 – Subplot Design",
+      "agent_name": "SubplotDesigner",
+      "action": "generate_subplots",
+      "status": "completed",
+      "summary": "Create 2 sottotrame intrecciate tra i personaggi.",
+      "details": {
+        "subplot_ids": [
+          "sub_01",
+          "sub_02"
+        ]
+      }
+    },
+    {
+      "step_index": 7,
+      "timestamp": "2026-11-16T15:05:23.702333+00:00",
+      "phase": "Fase 6 – Clue Design",
+      "agent_name": "ClueMaster",
+      "action": "generate_clues",
+      "status": "completed",
+      "summary": "Progettati 5 indizi (4 prove canoniche, 1 depistaggi).",
+      "details": {
+        "clue_ids": [
+          "clue_01",
+          "clue_02",
+          "clue_03",
+          "clue_04",
+          "clue_05"
+        ]
+      }
+    },
+    {
+      "step_index": 8,
+      "timestamp": "2026-11-16T15:05:27.931449+00:00",
+      "phase": "Fase 7 – Game Design",
+      "agent_name": "GameMechanicsDesigner",
+      "action": "generate_gameplay",
+      "status": "completed",
+      "summary": "Meccaniche di gioco definite in 3 fasi (90 min totali).",
+      "details": {
+        "phases": [
+          {
+            "phase_number": 1,
+            "title": "Fase 1: Aperitivo dei Sospetti",
+            "duration_minutes": 30,
+            "objectives": [
+              "Presentazione personaggi",
+              "Esplorazione primi indizi"
+            ],
+            "revealed_clue_ids": [
+              "clue_01",
+              "clue_02"
+            ],
+            "scheduled_events": [
+              "Lettura del prologo",
+              "Ritrovamento del primo reperto"
+            ],
+            "interrogation_mechanics": "Domande libere a coppie e confronto alibi"
+          },
+          {
+            "phase_number": 2,
+            "title": "Fase 2: Il Colpevole è Qui",
+            "duration_minutes": 45,
+            "objectives": [
+              "Analisi delle prime accuse",
+              "Svolgimento dell'investigazione"
+            ],
+            "revealed_clue_ids": [
+              "clue_03",
+              "clue_04"
+            ],
+            "scheduled_events": [
+              "Intervista con il sospettato",
+              "Riduzione del numero di suspecti"
+            ],
+            "interrogation_mechanics": "Interrogazioni individuali per identificare il colpevole iniziale"
+          },
+          {
+            "phase_number": 3,
+            "title": "Fase 3: La Scelta Finale",
+            "duration_minutes": 15,
+            "objectives": [
+              "Formulazione dell'accusa finale",
+              "Protezione del segreto"
+            ],
+            "revealed_clue_ids": [
+              "clue_05"
+            ],
+            "scheduled_events": [
+              "Verifica della verità",
+              "Decisione finale"
+            ],
+            "interrogation_mechanics": "Discussione finale su chi protegge il proprio segreto e la vera causa del mistero"
+          }
+        ],
+        "information_distribution_rules": "Le schede iniziano in fase 1 con solo due indizi. Le nuove schede vengono distribuite progressivamente basandosi sulle deduzioni prese durante le interrogazioni della fase corrente.",
+        "accusation_mechanics": "Ogni giocatore deve formulare un'accusa completa includendo il nome del colpevole, il modo in cui si è commesso il crimine e il motivo profondo (il segreto) che spinge l'aggressore verso quel crimine.",
+        "victory_conditions": "La vittoria si ottiene quando ogni giocatore individica colpevole, movente, arma e protegge il proprio segreto senza che nessuno riveli la verità prima del tempo scaduto.",
+        "master_notes": "In questa sessione, i tempi sono brevi. Usa le domande di apertura per rompere il ghiaccio. Ricorda ai giocatori che i segreti personali devono rimanere nascosti finché non sono stati rivelati correttamente."
+      }
+    },
+    {
+      "step_index": 9,
+      "timestamp": "2026-11-16T15:05:33.879873+00:00",
+      "phase": "Fase 8 – Narrative Production",
+      "agent_name": "NarrativeWriter",
+      "action": "generate_narrative",
+      "status": "completed",
+      "summary": "Materiali narrativi scritti: introduzione, prologo, battute per 4 personaggi e 3 documenti stampabili.",
+      "details": {
+        "document_ids": [
+          "doc_01",
+          "doc_02",
+          "doc_03"
+        ]
+      }
+    },
+    {
+      "step_index": 10,
+      "timestamp": "2026-11-16T15:05:38.048797+00:00",
+      "phase": "Fase 9 – Critical Review",
+      "agent_name": "ContinuityEditor",
+      "action": "review_iteration_1",
+      "status": "completed",
+      "summary": "Revisione #1: APPROVATA (Punteggio coerenza: 85/100, Osservazioni: 0)",
+      "details": {
+        "iteration": 1,
+        "passed": true,
+        "coherence_score": 85,
+        "critiques": [],
+        "summary": "La soluzione è coerente: l'arma e il colpevole sono identificati correttamente, ma la logica dell'alibi di Marco Vianetti è incoerente perché non spiega come abbia potuto essere svegliato senza aprire la porta."
+      }
+    },
+    {
+      "step_index": 11,
+      "timestamp": "2026-11-16T15:05:41.698085+00:00",
+      "phase": "Fase 10 – Finalization",
+      "agent_name": "FinalGameProducer",
+      "action": "finalize_production_suite",
+      "status": "completed",
+      "summary": "Suite finale prodotta: Manuale Master, Regole Giocatori, Soluzione Riservata, Master Report e Storia Completa.",
+      "details": {}
+    }
+  ]
+}

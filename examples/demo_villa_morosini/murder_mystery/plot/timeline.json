@@ -1,0 +1,68 @@
+[
+  {
+    "event_id": "evt_01",
+    "timestamp": "20:00",
+    "title": "Aperitivo inaugurale e gelo tra gli ospiti",
+    "description": "Lorenzo Valenti accoglie i presenti nel Salone delle Feste annunciando che a fine cena svelerà un tradimento imperdonabile.",
+    "involved_character_ids": [
+      "char_01",
+      "char_02",
+      "char_03",
+      "char_04",
+      "char_05"
+    ],
+    "location": "Salone delle Feste",
+    "is_public": true,
+    "is_crime_event": false
+  },
+  {
+    "event_id": "evt_02",
+    "timestamp": "20:45",
+    "title": "Lite riservata tra Elena Morosini e Marco Bellini",
+    "description": "Elena e Marco discutono animatamente in Galleria riguardo alla vendita segreta di una tela fiamminga.",
+    "involved_character_ids": [
+      "char_01",
+      "char_03"
+    ],
+    "location": "Galleria Orientale",
+    "is_public": false,
+    "is_crime_event": false
+  },
+  {
+    "event_id": "evt_03",
+    "timestamp": "21:05",
+    "title": "Guasto alla linea telefonica per il nubifragio",
+    "description": "Un fulmine abbatte la linea telefonica fissa della villa; il maggiordomo Arturo Bassi lo annota sul registro di servizio.",
+    "involved_character_ids": [
+      "char_05"
+    ],
+    "location": "Veranda sul Lago",
+    "is_public": false,
+    "is_crime_event": false
+  },
+  {
+    "event_id": "evt_04",
+    "timestamp": "21:15 - 21:30",
+    "title": "Avvelenamento nello Studio Privato",
+    "description": "Il Dott. Valerio Santi entra nello Studio Privato dal passaggio della libreria, versa la digossina nel decanter e perde un gemello da polso.",
+    "involved_character_ids": [
+      "char_02"
+    ],
+    "location": "Studio Privato",
+    "is_public": false,
+    "is_crime_event": true
+  },
+  {
+    "event_id": "evt_05",
+    "timestamp": "21:45",
+    "title": "Ritrovamento del corpo di Lorenzo Valenti",
+    "description": "Sofia De Luca e Arturo Bassi aprono lo Studio Privato e trovano Valenti privo di vita accanto al calice rovesciato.",
+    "involved_character_ids": [
+      "char_04",
+      "char_05"
+    ],
+    "location": "Studio Privato",
+    "is_public": true,
+    "is_crime_event": false
+  }
+]

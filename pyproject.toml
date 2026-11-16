@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "murdermind"
+version = "0.1.0"
+description = "Open-source Multi-Agent Narrative Studio for Murder Mystery Dinner Games"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+dependencies = [
+    "pydantic>=2.7.0",
+    "httpx>=0.27.0",
+    "python-dotenv>=1.0.1",
+    "fpdf2>=2.7.9",
+    "gradio>=5.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8.0.0",
+]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]

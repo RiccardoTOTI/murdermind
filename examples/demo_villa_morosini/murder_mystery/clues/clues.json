@@ -1,0 +1,67 @@
+[
+  {
+    "clue_id": "clue_01",
+    "title": "Fiala di Digossina e Calice di Cristallo",
+    "clue_type": "fisico",
+    "description": "Nel cestino vicino alla Galleria Orientale è stata trovata una micro-fiala ospedaliera di digossina concentrata; tracce identiche sono nel decanter.",
+    "printable_text": "[REPERTO #01 — ANALISI SCENA DEL CRIMine]\nIl brandy nel decanter personale di Lorenzo Valenti contiene un'alta concentrazione di digossina pura per uso ospedaliero. Una micro-fiala con lotto clinico riservato è stata gettata vicino alla Galleria Orientale.",
+    "discovery_phase": 1,
+    "location_or_holder": "Studio Privato / Galleria Orientale",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": null,
+    "is_red_herring": false,
+    "logical_inference": "L'assassino possiede competenze mediche e accesso diretto a farmaci ospedalieri (char_02)."
+  },
+  {
+    "clue_id": "clue_02",
+    "title": "Registro Guasti: Linea Telefonica Isolata dalle 21:05",
+    "clue_type": "contraddizione",
+    "description": "Il registro del maggiordomo e la verifica tecnica confermano che il telefono fisso della Veranda è muto dalle 21:05.",
+    "printable_text": "[REPERTO #02 — REGISTRO DI SERVIZIO DELLA VILLA]\nOre 21:05: Un fulmine ha tranciato il cavo telefonico esterno. Il telefono fisso della Veranda sul Lago è completamente fuori servizio dalle 21:05 in poi.",
+    "discovery_phase": 2,
+    "location_or_holder": "Veranda sul Lago",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": "char_02",
+    "is_red_herring": false,
+    "logical_inference": "Smentisce categoricamente l'alibi del Dott. Valerio Santi (char_02), che sostiene di aver telefonato dalla Veranda alle 21:20."
+  },
+  {
+    "clue_id": "clue_03",
+    "title": "Gemello d'Argento con Iniziali 'V.S.' nel Passaggio Segreto",
+    "clue_type": "oggetto",
+    "description": "Dietro la libreria girevole dello Studio Privato è rimasto impigliato un gemello da polso in argento inciso 'V.S.'.",
+    "printable_text": "[REPERTO #03 — OGGETTO PERSONALE RINVENUTO]\nSul pavimento del passaggio segreto che collega la Galleria Orientale allo Studio Privato è stato rinvenuto un gemello da polso in argento con le iniziali 'V.S.' e il fermaglio spezzato.",
+    "discovery_phase": 2,
+    "location_or_holder": "Passaggio segreto dietro la libreria",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": "char_02",
+    "is_red_herring": false,
+    "logical_inference": "Prova fisica che Valerio Santi (char_02) ha usato il passaggio segreto per entrare nello Studio Privato."
+  },
+  {
+    "clue_id": "clue_04",
+    "title": "Dossier 'Clinica San Giorgio' nella Cassaforte",
+    "clue_type": "documento",
+    "description": "Fascicolo riservato di Valenti con le prove delle perizie mediche falsificate dal Dott. Valerio Santi.",
+    "printable_text": "[REPERTO #04 — DOSSIER RISERVATO DELLA VITTIMA]\nAppunto autografo di Lorenzo Valenti: 'Ho le prove firmate delle false perizie e della sottrazione di farmaci da parte del Dott. Valerio Santi. Lunedì mattina consegnerò tutto al Procuratore.'",
+    "discovery_phase": 3,
+    "location_or_holder": "Cassaforte dello Studio Privato",
+    "points_to_character_id": "char_02",
+    "contradicts_alibi_of_id": "char_02",
+    "is_red_herring": false,
+    "logical_inference": "Conferma il movente diretto e urgente di char_02 per uccidere Valenti quella sera stessa."
+  },
+  {
+    "clue_id": "clue_05",
+    "title": "Biglietto Strappato dell'Appuntamento delle 20:45",
+    "clue_type": "messaggio",
+    "description": "Biglietto urgente scritto dalla Contessa Elena a Marco Bellini riguardo al quadro fiammingo.",
+    "printable_text": "[REPERTO #05 — BIGLIETTO STRAPPATO]\n'Marco, vediamoci in Galleria alle 20:45. Se Lorenzo scopre la sostituzione prima di domani, siamo rovinati entrambi.'",
+    "discovery_phase": 1,
+    "location_or_holder": "Salone delle Feste",
+    "points_to_character_id": "char_03",
+    "contradicts_alibi_of_id": null,
+    "is_red_herring": true,
+    "logical_inference": "Depistaggio legato alla sottotrama sub_01: riguarda il furto del quadro alle 20:45, non l'omicidio delle 21:20."
+  }
+]
