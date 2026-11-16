@@ -16,6 +16,22 @@ logger = logging.getLogger(__name__)
 
 T = TypeVar("T", bound=BaseModel)
 
+# Global optional callback registered by app.py on Hugging Face ZeroGPU Spaces
+_ZEROGPU_GENERATE_FN: Optional[Callable[[List[Dict[str, str]], float, int], str]] = None
+
+
+def register_zerogpu_generator(
+    fn: Callable[[List[Dict[str, str]], float, int], str],
+) -> None:
+    """Register an in-process ZeroGPU transformers generation callable."""
+    global _ZEROGPU_GENERATE_FN
+    _ZEROGPU_GENERATE_FN = fn
+
+
+def get_zerogpu_generator() -> Optional[Callable[[List[Dict[str, str]], float, int], str]]:
+    """Return the registered ZeroGPU generation callable if available."""
+    return _ZEROGPU_GENERATE_FN
+
 
 class LLMClientError(Exception):
     """Raised when the LLM endpoint fails or returns an unrecoverable response."""
@@ -128,6 +144,8 @@ class OpenAICompatibleClient:
 
     def resolve_endpoint(self) -> tuple[str, str, str]:
         """Return (base_url, api_key, model) based on configured provider mode."""
+        if self.config.provider == ProviderMode.ZEROGPU:
+            return ("zerogpu://in-process", "", self.config.zerogpu_model)
         if self.config.provider == ProviderMode.REMOTE:
             return (
                 self.config.remote_base_url,
@@ -137,6 +155,8 @@ class OpenAICompatibleClient:
         if self.config.provider == ProviderMode.AUTO:
             if self.ping_local():
                 return (self.config.base_url, self.config.api_key, self.config.model)
+            if _ZEROGPU_GENERATE_FN is not None:
+                return ("zerogpu://in-process", "", self.config.zerogpu_model)
             if self.config.remote_api_key:
                 return (
                     self.config.remote_base_url,
@@ -161,6 +181,23 @@ class OpenAICompatibleClient:
     def check_health(self) -> Dict[str, Any]:
         """Verify connectivity and authentication with the active LLM endpoint."""
         base_url, api_key, model = self.resolve_endpoint()
+        if base_url == "zerogpu://in-process":
+            if _ZEROGPU_GENERATE_FN is not None:
+                return {
+                    "ok": True,
+                    "provider": "zerogpu",
+                    "base_url": "ZeroGPU (NVIDIA RTX PRO 6000 48GB)",
+                    "model": model,
+                    "reply": "ZeroGPU Ready",
+                }
+            return {
+                "ok": False,
+                "provider": "zerogpu",
+                "base_url": "zerogpu://in-process",
+                "model": model,
+                "error": "ZeroGPU non è attivo in questo processo locale (usa 'local' per 127.0.0.1:8888).",
+            }
+
         headers = {"Content-Type": "application/json"}
         if api_key:
             headers["Authorization"] = f"Bearer {api_key}"
@@ -217,8 +254,20 @@ class OpenAICompatibleClient:
         max_tokens: Optional[int] = None,
         json_mode: bool = False,
     ) -> str:
-        """Send a synchronous chat completion request to the configured OpenAI-compatible server."""
+        """Send a synchronous chat completion request to the configured OpenAI-compatible server or ZeroGPU worker."""
         base_url, api_key, model = self.resolve_endpoint()
+        eff_temp = self.config.temperature if temperature is None else temperature
+        eff_tokens = self.config.max_tokens if max_tokens is None else max_tokens
+
+        if base_url == "zerogpu://in-process":
+            if _ZEROGPU_GENERATE_FN is None:
+                raise LLMClientError(
+                    "Modalità ZeroGPU selezionata ma nessun modello ZeroGPU è caricato in memoria. "
+                    "In locale seleziona 'local' (http://127.0.0.1:8888/v1)."
+                )
+            self.call_count += 1
+            return _ZEROGPU_GENERATE_FN(messages, eff_temp, eff_tokens)
+
         url = f"{base_url}/chat/completions"
 
         headers: Dict[str, str] = {"Content-Type": "application/json"}
@@ -228,8 +277,8 @@ class OpenAICompatibleClient:
         payload: Dict[str, Any] = {
             "model": model,
             "messages": messages,
-            "temperature": self.config.temperature if temperature is None else temperature,
-            "max_tokens": self.config.max_tokens if max_tokens is None else max_tokens,
+            "temperature": eff_temp,
+            "max_tokens": eff_tokens,
             "stream": False,
         }
         if json_mode:

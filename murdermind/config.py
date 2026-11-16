@@ -14,12 +14,13 @@ load_dotenv(override=False)
 
 class ProviderMode(str, Enum):
     LOCAL = "local"
+    ZEROGPU = "zerogpu"
     REMOTE = "remote"
     AUTO = "auto"
 
 
 class LLMConfig(BaseModel):
-    """Configuration for an OpenAI-compatible LLM endpoint."""
+    """Configuration for an OpenAI-compatible or ZeroGPU LLM endpoint."""
 
     provider: ProviderMode = Field(default=ProviderMode.LOCAL)
     base_url: str = Field(default="http://127.0.0.1:8888/v1")
@@ -29,22 +30,28 @@ class LLMConfig(BaseModel):
     max_tokens: int = Field(default=2048, ge=64, le=16384)
     timeout: float = Field(default=120.0, ge=5.0, le=600.0)
 
-    # Remote provider settings (used when provider == REMOTE or AUTO fallback on HF Spaces)
+    # ZeroGPU in-process model id (used on Hugging Face Spaces with zero-a10g)
+    zerogpu_model: str = Field(default="Qwen/Qwen2.5-3B-Instruct")
+
+    # Remote provider settings (used when provider == REMOTE or AUTO fallback)
     remote_base_url: str = Field(default="https://router.huggingface.co/v1")
     remote_api_key: str = Field(default="")
     remote_model: str = Field(default="Qwen/Qwen2.5-7B-Instruct")
 
     @classmethod
     def from_env(cls) -> "LLMConfig":
-        provider_raw = os.getenv("LLM_PROVIDER", "local").strip().lower()
+        provider_raw = os.getenv("LLM_PROVIDER", "").strip().lower()
+        # On Hugging Face Spaces, SPACE_ID or SPACES_ZERO_GPU is set automatically
+        if not provider_raw:
+            if os.getenv("SPACES_ZERO_GPU") == "1" or os.getenv("SPACE_ID"):
+                provider_raw = "zerogpu"
+            else:
+                provider_raw = "local"
+
         try:
             provider = ProviderMode(provider_raw)
         except ValueError:
             provider = ProviderMode.LOCAL
-
-        # On Hugging Face Spaces, SPACE_ID is set automatically; default to auto/remote if local isn't forced
-        if os.getenv("SPACE_ID") and "LLM_PROVIDER" not in os.environ:
-            provider = ProviderMode.AUTO
 
         remote_key = (
             os.getenv("REMOTE_LLM_API_KEY")
@@ -61,6 +68,7 @@ class LLMConfig(BaseModel):
             temperature=float(os.getenv("LLM_TEMPERATURE", "0.7")),
             max_tokens=int(os.getenv("LLM_MAX_TOKENS", "2048")),
             timeout=float(os.getenv("LLM_TIMEOUT", "120")),
+            zerogpu_model=os.getenv("ZEROGPU_MODEL", "Qwen/Qwen2.5-3B-Instruct"),
             remote_base_url=os.getenv(
                 "REMOTE_LLM_BASE_URL", "https://router.huggingface.co/v1"
             ).rstrip("/"),
