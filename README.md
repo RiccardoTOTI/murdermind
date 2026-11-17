@@ -71,12 +71,18 @@ Instead of generating a single monolithic story, MurderMind coordinates **10 spe
 
 ---
 
-## ☁️ Hugging Face Spaces Deployment
+## ☁️ Hugging Face Spaces & CI/CD Pipeline
 
-Because a remote Hugging Face Space cannot reach `127.0.0.1:8888` on a developer's machine, `murdermind/config.py` and `OpenAICompatibleClient` support three provider modes:
+`murdermind/config.py` and `OpenAICompatibleClient` support four provider modes:
 - `local`: Uses `http://127.0.0.1:8888/v1` (`unsloth/Qwen3.5-2B`) for local development.
-- `remote`: Uses a remote OpenAI-compatible endpoint (`REMOTE_LLM_BASE_URL`, `REMOTE_LLM_API_KEY` / `HF_TOKEN`, `REMOTE_LLM_MODEL`).
-- `auto`: Automatically uses `local` if reachable, or falls back to `remote` on Hugging Face Spaces while pre-loading the full playable Demo Mystery (*"L'Ultimo Brindisi a Villa Morosini"*).
+- `zerogpu`: Loads `Qwen/Qwen2.5-3B-Instruct` directly on Hugging Face **ZeroGPU (`zero-a10g`)** at zero API cost.
+- `remote`: Uses a remote OpenAI-compatible endpoint (`REMOTE_LLM_BASE_URL`, `REMOTE_LLM_API_KEY`).
+- `auto`: Automatically selects `local` if reachable, or `zerogpu`/`remote` on Hugging Face Spaces.
+
+### Automated CI/CD (`.github/workflows/ci-cd-huggingface.yml`)
+Every push to `main` triggers a two-stage GitHub Actions pipeline:
+1. **CI (`test`)**: Installs dependencies, checks syntax (`py_compile`), and runs the `pytest` test suite.
+2. **CD (`deploy-hf-space`)**: Automatically syncs the repository to [`https://huggingface.co/spaces/nonsonpratico/murdermind`](https://huggingface.co/spaces/nonsonpratico/murdermind) using `HF_TOKEN`.
 
 ---
 

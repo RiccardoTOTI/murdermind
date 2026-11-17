@@ -1,0 +1,91 @@
+name: CI/CD — Test & Deploy to Hugging Face Space
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  test:
+    name: "🧪 CI: Pytest & Syntax Verification"
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: "pip"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -e ".[dev]"
+
+      - name: Verify Python syntax
+        run: python -m py_compile app.py
+
+      - name: Run automated test suite
+        env:
+          LLM_PROVIDER: local
+          LLM_BASE_URL: http://127.0.0.1:19999/v1
+        run: pytest -v
+
+  deploy-hf-space:
+    name: "🚀 CD: Deploy to Hugging Face Space"
+    needs: test
+    if: github.ref == 'refs/heads/main' && github.event_name != 'pull_request'
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install huggingface_hub
+        run: pip install -U huggingface_hub
+
+      - name: Sync repository to Hugging Face Space (nonsonpratico/murdermind)
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          python - << 'EOF'
+          import os
+          import sys
+          from huggingface_hub import HfApi
+
+          token = os.environ.get("HF_TOKEN", "").strip()
+          if not token:
+              print("ERROR: HF_TOKEN secret is empty or not configured in GitHub Actions Secrets.", file=sys.stderr)
+              sys.exit(1)
+
+          api = HfApi(token=token)
+          commit_info = api.upload_folder(
+              folder_path=".",
+              repo_id="nonsonpratico/murdermind",
+              repo_type="space",
+              commit_message=f"CI/CD auto-deploy from GitHub ({os.environ.get('GITHUB_SHA', 'main')[:7]})",
+              ignore_patterns=[
+                  ".git/**",
+                  ".github/**",
+                  ".env",
+                  ".env.*",
+                  "**/__pycache__/**",
+                  ".pytest_cache/**",
+                  "data/**",
+                  "*.db",
+              ],
+          )
+          print(f"Successfully deployed to Hugging Face Space: {commit_info.commit_url}")
+          EOF
