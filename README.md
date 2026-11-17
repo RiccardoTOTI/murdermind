@@ -68,7 +68,7 @@ Quando clicchi su **Esporta Dossier**, MurderMind genera un pacchetto completo (
 
 ---
 
-## 🚀 Avvio Rapido (Locale & Hugging Face Spaces)
+## 🚀 Avvio Rapido (Locale)
 
 ### In Locale (con `unsloth/Qwen3.5-2B` su `:8888`)
 ```bash
@@ -77,10 +77,6 @@ pip install -e ".[dev]"       # Installa dipendenze
 pytest -v                     # Esegui i test automatici
 python app.py                 # Avvia la Web App su http://localhost:7860
 ```
-
-### Su Hugging Face Spaces & CI/CD Automatico
-- **ZeroGPU (`zero-a10g`)**: Lo Space pubblico gira gratuitamente su **ZeroGPU** caricando `Qwen/Qwen2.5-3B-Instruct` direttamente su GPU, senza costi API.
-- **Auto-Deploy DevOps (`.github/workflows/ci-cd-huggingface.yml`)**: Ad ogni `git push` su `main`, GitHub Actions esegue la suite `pytest` e, se tutti i test passano, pubblica automaticamente la nuova versione sullo Space [`nonsonpratico/murdermind`](https://huggingface.co/spaces/nonsonpratico/murdermind).
 
 ---
 
